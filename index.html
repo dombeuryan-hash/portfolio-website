@@ -3,111 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ryan Curtis Dombeu — Developer & AI Engineer</title>
-    <meta name="description" content="Portfolio of Ryan Curtis Dombeu — CS Student at Frankfurt UAS specialising in AI Agents, Automation and Full-Stack Development." />
+    <title>Ryan Curtis Dombeu</title>
+    <meta name="description" content="Ryan Curtis Dombeu — AI Engineer & Full-Stack Developer. CS Student at Frankfurt University of Applied Sciences." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Custom cursor -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
 
-    <!-- ── HEADER ─────────────────────────────────── -->
+    <!-- ── HEADER BAR ──────────────────────────────── -->
     <header class="header" id="header">
-      <div class="container header-inner">
-        <a href="#home" class="logo">RCD<span class="logo-dot">.</span></a>
-
-        <nav class="nav" id="mainNav">
-          <a href="#about"      class="nav-link">About</a>
-          <a href="#skills"     class="nav-link">Skills</a>
-          <a href="#experience" class="nav-link">Experience</a>
-          <a href="#projects"   class="nav-link">Projects</a>
-          <a href="#contact"    class="nav-link">Contact</a>
-        </nav>
-
-        <div class="header-actions">
-          <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
-            <!-- sun -->
-            <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/>
-              <line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/>
-              <line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-            <!-- moon -->
-            <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
-          <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-            <span></span><span></span>
-          </button>
-        </div>
+      <div class="hdr-identity">
+        <span class="hdr-greeting" id="greeting">Good evening!</span>
+        <span class="hdr-div">/</span>
+        <span class="hdr-name">Ryan C. Dombeu</span>
       </div>
+
+      <nav class="hdr-socials">
+        <span class="hdr-label">Socials</span>
+        <span class="hdr-div">/</span>
+        <a href="https://www.linkedin.com/in/curtis-dombeu-350b47238/" target="_blank" rel="noreferrer">li</a>
+        <span class="hdr-div">/</span>
+        <a href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">gh</a>
+        <span class="hdr-div">/</span>
+        <a href="mailto:dombeuryan@gmail.com">em</a>
+      </nav>
+
+      <nav class="hdr-nav" id="hdrNav">
+        <a href="#home"       class="hn">Index</a>
+        <span class="hdr-div">/</span>
+        <a href="#about"      class="hn">About</a>
+        <span class="hdr-div">/</span>
+        <a href="#projects"   class="hn">Projects</a>
+        <span class="hdr-div">/</span>
+        <a href="#contact"    class="hn">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hdr-cta">Let's talk!</a>
+
+      <button class="hdr-menu" id="menuBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </header>
 
+    <!-- Mobile overlay nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#home"     class="mn-link" data-close>Index</a>
+      <a href="#about"    class="mn-link" data-close>About</a>
+      <a href="#projects" class="mn-link" data-close>Projects</a>
+      <a href="#contact"  class="mn-link" data-close>Contact</a>
+      <div class="mn-socials">
+        <a href="https://www.linkedin.com/in/curtis-dombeu-350b47238/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="mailto:dombeuryan@gmail.com">Email</a>
+      </div>
+    </div>
+
     <main>
+
       <!-- ── HERO ──────────────────────────────────── -->
       <section class="hero" id="home">
-        <div class="hero-bg">
-          <div class="glow glow-1"></div>
-          <div class="glow glow-2"></div>
-          <div class="dot-grid"></div>
-        </div>
-        <div class="container hero-inner">
-          <div class="hero-badge reveal">
-            <span class="pulse-dot"></span>
-            Available for opportunities
+
+        <!-- Left column -->
+        <div class="hero-left">
+          <div class="hero-name-block">
+            <p class="hero-pre">Hi there! This is</p>
+            <p class="hero-fullname">Ryan Curtis Dombeu</p>
           </div>
-          <h1 class="hero-title">
-            <span class="reveal-line">Ryan Curtis</span>
-            <span class="reveal-line gradient-text">Dombeu</span>
-          </h1>
-          <p class="hero-role reveal">
-            <span id="typed"></span><span class="blink">_</span>
-          </p>
-          <p class="hero-desc reveal">
-            CS Student (7th Sem) · Frankfurt University of Applied Sciences<br>
-            Building AI agents, automation systems &amp; full-stack web apps.
-          </p>
-          <div class="hero-btns reveal">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="Ryan_Curtis_Dombeu_Lebenslauf.pdf" class="btn btn-ghost" target="_blank" rel="noreferrer">
-              Download CV
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
+
+          <div class="hero-display">
+            <!-- Main display text -->
+            <div class="display-main">
+              <span class="dl">CODE &amp;</span>
+              <span class="dl">AUTOMATE</span>
+            </div>
+            <!-- Mirror / reflection -->
+            <div class="display-mirror" aria-hidden="true">
+              <span class="dl">CODE &amp;</span>
+              <span class="dl">AUTOMATE</span>
+            </div>
+            <!-- Floating accent labels (like FINTECH / WEB3 in reference) -->
+            <div class="display-labels" aria-hidden="true">
+              <span>AI AGENTS</span>
+              <span>FULL-STACK</span>
+            </div>
           </div>
-          <div class="hero-socials reveal">
-            <a href="mailto:dombeuryan@gmail.com" class="social-link" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/curtis-dombeu-350b47238/" class="social-link" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://github.com/dombeuryan-hash" class="social-link" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-            </a>
+
+          <p class="hero-scroll">(Scroll down)</p>
+        </div>
+
+        <!-- Right info panel -->
+        <aside class="hero-right">
+          <div class="hr-services">
+            <ul>
+              <li>AI Agent Development</li>
+              <li>Workflow Automation</li>
+              <li>Full-Stack Development</li>
+              <li>API Integration</li>
+              <li>Prompt Engineering</li>
+            </ul>
           </div>
-        </div>
-        <div class="scroll-hint reveal">
-          <span>scroll</span>
-          <div class="scroll-line"></div>
-        </div>
+
+          <a href="#contact" class="hr-cta">
+            How can I help?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+
+          <div class="hr-bio">
+            <p>CS Student (7th Sem) at Frankfurt University of Applied Sciences. Building AI agents, automation systems &amp; full-stack web apps with Python, TypeScript and modern tools.</p>
+            <div class="hr-badge">
+              <span class="pulse"></span>
+              Available for opportunities
+            </div>
+          </div>
+        </aside>
+
+        <!-- Bottom glow -->
+        <div class="hero-glow" aria-hidden="true"></div>
       </section>
 
       <!-- ── ABOUT ─────────────────────────────────── -->
       <section class="section" id="about">
-        <div class="container">
-          <div class="section-label reveal">01 — About</div>
-          <h2 class="section-title reveal">Who I am</h2>
-          <div class="about-grid">
-            <div class="about-text reveal">
+        <div class="s-container">
+          <div class="s-head">
+            <span class="s-num">01</span>
+            <h2 class="s-title">About</h2>
+          </div>
+          <div class="about-body">
+            <div class="about-text">
               <p>
                 Ich bin Ryan Curtis Dombeu, Informatikstudent im 7. Semester an der Frankfurt University of Applied Sciences
                 mit besonderem Interesse an AI Agents, Automatisierung und Full-Stack-Development. Ich entwickle praxisnahe
@@ -118,91 +144,75 @@
                 Mein Ziel ist es, durch KI-gestützte Anwendungen, moderne Webtechnologien und intelligente Prozesse einen
                 konkreten Mehrwert in Projekten zu schaffen.
               </p>
-              <div class="about-tags">
-                <span class="chip">AI Agents</span>
-                <span class="chip">Automation</span>
-                <span class="chip">Full-Stack</span>
-                <span class="chip">Python</span>
-                <span class="chip">TypeScript</span>
+            </div>
+            <div class="about-stats">
+              <div class="astat">
+                <span class="astat-n">7</span>
+                <span class="astat-l">Semesters</span>
+              </div>
+              <div class="astat">
+                <span class="astat-n">3</span>
+                <span class="astat-l">Spoken<br>Languages</span>
+              </div>
+              <div class="astat">
+                <span class="astat-n">7+</span>
+                <span class="astat-l">Projects<br>Built</span>
+              </div>
+              <div class="astat">
+                <span class="astat-n">20%</span>
+                <span class="astat-l">Time Saved<br>via Automation</span>
               </div>
             </div>
-            <div class="about-stats reveal">
-              <div class="stat-card">
-                <span class="stat-num">7</span>
-                <span class="stat-lbl">Semesters</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">3</span>
-                <span class="stat-lbl">Languages</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">7+</span>
-                <span class="stat-lbl">Projects</span>
-              </div>
-              <div class="stat-card">
-                <span class="stat-num">20%</span>
-                <span class="stat-lbl">Time saved by automation</span>
-              </div>
-            </div>
+          </div>
+          <div class="about-chips">
+            <span class="chip">Python</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Vue 3</span>
+            <span class="chip">n8n</span>
+            <span class="chip">Relevance AI</span>
+            <span class="chip">C / C++</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">REST APIs</span>
           </div>
         </div>
       </section>
 
       <!-- ── SKILLS ─────────────────────────────────── -->
       <section class="section" id="skills">
-        <div class="container">
-          <div class="section-label reveal">02 — Skills</div>
-          <h2 class="section-title reveal">Tech Stack</h2>
-          <div class="skills-grid">
-            <div class="skill-group reveal">
-              <h3 class="skill-cat">Languages</h3>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">C</span>
-                <span class="tag">C++</span>
-                <span class="tag">Java</span>
+        <div class="s-container">
+          <div class="s-head">
+            <span class="s-num">02</span>
+            <h2 class="s-title">Skills</h2>
+          </div>
+          <div class="skills-rows">
+            <div class="skill-row">
+              <span class="sr-label">Languages</span>
+              <div class="sr-tags">
+                <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>C</span><span>C++</span><span>Java</span>
               </div>
             </div>
-            <div class="skill-group reveal">
-              <h3 class="skill-cat">Web &amp; Framework</h3>
-              <div class="tags">
-                <span class="tag">Vue 3</span>
-                <span class="tag">React</span>
-                <span class="tag">Vite</span>
-                <span class="tag">Tailwind CSS</span>
-                <span class="tag">REST APIs</span>
-                <span class="tag">HTML/CSS</span>
+            <div class="skill-row">
+              <span class="sr-label">Web &amp; Frameworks</span>
+              <div class="sr-tags">
+                <span>Vue 3</span><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>REST APIs</span><span>HTML / CSS</span>
               </div>
             </div>
-            <div class="skill-group reveal">
-              <h3 class="skill-cat">AI &amp; Automation</h3>
-              <div class="tags">
-                <span class="tag">n8n</span>
-                <span class="tag">Relevance AI</span>
-                <span class="tag">KI-Agenten</span>
-                <span class="tag">Prompt Engineering</span>
-                <span class="tag">API Integration</span>
-                <span class="tag">Workflow Automation</span>
+            <div class="skill-row">
+              <span class="sr-label">AI &amp; Automation</span>
+              <div class="sr-tags">
+                <span>n8n</span><span>Relevance AI</span><span>AI Agents</span><span>Prompt Engineering</span><span>Workflow Automation</span><span>API Integration</span>
               </div>
             </div>
-            <div class="skill-group reveal">
-              <h3 class="skill-cat">Database &amp; Tools</h3>
-              <div class="tags">
-                <span class="tag">MS SQL Server</span>
-                <span class="tag">Git</span>
-                <span class="tag">Scrum / Agile</span>
-                <span class="tag">MS Office</span>
-                <span class="tag">Qt Creator</span>
+            <div class="skill-row">
+              <span class="sr-label">Tools &amp; DB</span>
+              <div class="sr-tags">
+                <span>MS SQL Server</span><span>Git</span><span>Scrum / Agile</span><span>Qt Creator</span><span>MS Office</span>
               </div>
             </div>
-            <div class="skill-group reveal">
-              <h3 class="skill-cat">Languages Spoken</h3>
-              <div class="tags">
-                <span class="tag tag-lang">🇬🇧 English — Native</span>
-                <span class="tag tag-lang">🇫🇷 French — Native</span>
-                <span class="tag tag-lang">🇩🇪 German — C1</span>
+            <div class="skill-row">
+              <span class="sr-label">Spoken Languages</span>
+              <div class="sr-tags">
+                <span>🇬🇧 English — Native</span><span>🇫🇷 French — Native</span><span>🇩🇪 German — C1</span>
               </div>
             </div>
           </div>
@@ -211,288 +221,222 @@
 
       <!-- ── EXPERIENCE ─────────────────────────────── -->
       <section class="section" id="experience">
-        <div class="container">
-          <div class="section-label reveal">03 — Experience</div>
-          <h2 class="section-title reveal">Work History</h2>
-          <div class="timeline">
-            <div class="tl-item reveal">
-              <div class="tl-marker"></div>
-              <div class="tl-body">
-                <div class="tl-header">
-                  <div>
-                    <h3 class="tl-role">Automation and AI Support</h3>
-                    <p class="tl-company">Level Up in Germany e. V. · Stuttgart</p>
-                  </div>
-                  <span class="tl-date">11.2025 — present</span>
-                </div>
-                <ul class="tl-list">
-                  <li>Entwicklung und Umsetzung automatisierter Prozesse für Content- und Serviceabläufe</li>
+        <div class="s-container">
+          <div class="s-head">
+            <span class="s-num">03</span>
+            <h2 class="s-title">Experience</h2>
+          </div>
+          <div class="xp-list">
+
+            <div class="xp-item">
+              <div class="xp-meta">
+                <span class="xp-date">11.2025 — present</span>
+                <span class="xp-loc">Stuttgart, DE</span>
+              </div>
+              <div class="xp-body">
+                <h3 class="xp-role">Automation &amp; AI Support</h3>
+                <p class="xp-company">Level Up in Germany e. V.</p>
+                <ul class="xp-bullets">
+                  <li>Entwicklung automatisierter Prozesse für Content- und Serviceabläufe</li>
                   <li>Zeitersparnis von 20 % durch Automatisierung manueller Schritte</li>
                 </ul>
-                <div class="tl-tags">
-                  <span class="tag tag-sm">n8n</span>
-                  <span class="tag tag-sm">Automation</span>
-                  <span class="tag tag-sm">Content Workflows</span>
+                <div class="xp-tags">
+                  <span>n8n</span><span>Automation</span><span>Content Workflows</span>
                 </div>
               </div>
             </div>
-            <div class="tl-item reveal">
-              <div class="tl-marker"></div>
-              <div class="tl-body">
-                <div class="tl-header">
-                  <div>
-                    <h3 class="tl-role">Sales Research &amp; KI-gestützte Vertriebsunterstützung</h3>
-                    <p class="tl-company">FAZIT Communication GmbH · Frankfurt</p>
-                  </div>
-                  <span class="tl-date">01.2025 — 02.2026</span>
-                </div>
-                <ul class="tl-list">
+
+            <div class="xp-item">
+              <div class="xp-meta">
+                <span class="xp-date">01.2025 — 02.2026</span>
+                <span class="xp-loc">Frankfurt, DE</span>
+              </div>
+              <div class="xp-body">
+                <h3 class="xp-role">Sales Research &amp; KI-gestützte Vertriebsunterstützung</h3>
+                <p class="xp-company">FAZIT Communication GmbH</p>
+                <ul class="xp-bullets">
                   <li>Erstellung von Zusammenfassungen, Reports und Vorlagen für das Vertriebsteam</li>
-                  <li>Mitarbeit an digitalen und KI-gestützten Abläufen zur effizienteren Informationsverarbeitung</li>
+                  <li>Mitarbeit an KI-gestützten Abläufen zur effizienteren Informationsverarbeitung</li>
                 </ul>
-                <div class="tl-tags">
-                  <span class="tag tag-sm">KI-Tools</span>
-                  <span class="tag tag-sm">Research</span>
-                  <span class="tag tag-sm">Reporting</span>
+                <div class="xp-tags">
+                  <span>KI-Tools</span><span>Research</span><span>Reporting</span>
                 </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Education -->
+          <div class="s-sub-head">Education</div>
+          <div class="xp-list">
+            <div class="xp-item">
+              <div class="xp-meta">
+                <span class="xp-date">04.2023 — present</span>
+                <span class="xp-loc">Frankfurt, DE</span>
+              </div>
+              <div class="xp-body">
+                <h3 class="xp-role">B.Sc. Informatik</h3>
+                <p class="xp-company">Frankfurt University of Applied Sciences</p>
+                <p class="xp-note">Fokus: Softwareentwicklung, KI-Agenten, Algorithmen und Automatisierung</p>
+              </div>
+            </div>
+            <div class="xp-item">
+              <div class="xp-meta">
+                <span class="xp-date">2019 — 2021</span>
+                <span class="xp-loc">Douala, CM</span>
+              </div>
+              <div class="xp-body">
+                <h3 class="xp-role">GCE A-Level (Abitur equivalent)</h3>
+                <p class="xp-company">Laval Bilingual College</p>
+                <p class="xp-note">Durchschnittsnote: 1,6</p>
               </div>
             </div>
           </div>
 
-          <!-- Education sub-section -->
-          <div class="section-label reveal" style="margin-top: 3.5rem;">Education</div>
-          <div class="timeline">
-            <div class="tl-item reveal">
-              <div class="tl-marker"></div>
-              <div class="tl-body">
-                <div class="tl-header">
-                  <div>
-                    <h3 class="tl-role">Bachelor of Science — Informatik</h3>
-                    <p class="tl-company">Frankfurt University of Applied Sciences</p>
-                  </div>
-                  <span class="tl-date">04.2023 — present</span>
-                </div>
-                <p class="tl-desc">Fokus auf Softwareentwicklung, KI-Agenten, Algorithmen und Automatisierung.</p>
-              </div>
-            </div>
-            <div class="tl-item reveal">
-              <div class="tl-marker"></div>
-              <div class="tl-body">
-                <div class="tl-header">
-                  <div>
-                    <h3 class="tl-role">GCE A-Level (Abitur equivalent)</h3>
-                    <p class="tl-company">Laval Bilingual College · Douala, Cameroon</p>
-                  </div>
-                  <span class="tl-date">2019 — 2021</span>
-                </div>
-                <p class="tl-desc">Durchschnittsnote: 1,6</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       <!-- ── PROJECTS ───────────────────────────────── -->
       <section class="section" id="projects">
-        <div class="container">
-          <div class="section-label reveal">04 — Projects</div>
-          <h2 class="section-title reveal">Selected Work</h2>
-          <p class="section-sub reveal">A selection of projects from university and personal development.</p>
-          <div class="projects-grid">
+        <div class="s-container">
+          <div class="s-head">
+            <span class="s-num">04</span>
+            <h2 class="s-title">Projects</h2>
+          </div>
 
-            <article class="project-card reveal">
-              <div class="project-num">01</div>
-              <h3 class="project-name">Quiz UI</h3>
-              <p class="project-desc">
-                Interactive multiple-choice quiz app built with Vue 3, TypeScript and Tailwind CSS. Uses the Composition API for clean, modular component design — features live answer feedback, score tracking and a fully type-safe codebase (55 % TypeScript, 41 % Vue).
-              </p>
-              <div class="project-tech">
-                <span class="tag tag-sm">Vue 3</span>
-                <span class="tag tag-sm">TypeScript</span>
-                <span class="tag tag-sm">Tailwind CSS</span>
-                <span class="tag tag-sm">Vite</span>
-                <span class="tag tag-sm">Composition API</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/dombeuryan-hash/Quiz-UI" class="project-link" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                  View on GitHub
-                </a>
-              </div>
-            </article>
+          <div class="proj-list">
 
-            <article class="project-card reveal">
-              <div class="project-num">02</div>
-              <h3 class="project-name">KI-gestützter Sales Research Agent</h3>
-              <p class="project-desc">
-                Automatisierter Agent zum Sammeln und Zusammenfassen von Unternehmensdaten zur Vorbereitung von Vertriebsgesprächen. Reduziert manuelle Recherchezeit signifikant.
-              </p>
-              <div class="project-tech">
-                <span class="tag tag-sm">Relevance AI</span>
-                <span class="tag tag-sm">Python</span>
-                <span class="tag tag-sm">API Integration</span>
+            <a class="proj-item" href="https://github.com/dombeuryan-hash/Quiz-UI" target="_blank" rel="noreferrer">
+              <span class="pi-num">01</span>
+              <div class="pi-body">
+                <h3 class="pi-name">Quiz UI</h3>
+                <p class="pi-desc">Interactive multiple-choice quiz app — Vue 3, TypeScript, Tailwind CSS, Composition API. Fully type-safe (55 % TS, 41 % Vue).</p>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/dombeuryan-hash" class="project-link" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                  GitHub
-                </a>
+              <div class="pi-tags">
+                <span>Vue 3</span><span>TypeScript</span><span>Tailwind</span><span>Vite</span>
               </div>
-            </article>
+              <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
 
-            <article class="project-card reveal">
-              <div class="project-num">03</div>
-              <h3 class="project-name">Lead-Qualification Agent (n8n)</h3>
-              <p class="project-desc">
-                Automatisiertes System zur Bewertung eingehender Leads und Vorbereitung von Sales-Calls durch KI-basiertes Scoring und automatisierte Datenverarbeitung.
-              </p>
-              <div class="project-tech">
-                <span class="tag tag-sm">n8n</span>
-                <span class="tag tag-sm">AI Scoring</span>
-                <span class="tag tag-sm">Automation</span>
+            <a class="proj-item" href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">
+              <span class="pi-num">02</span>
+              <div class="pi-body">
+                <h3 class="pi-name">KI-gestützter Sales Research Agent</h3>
+                <p class="pi-desc">Automatisierter Agent zum Sammeln &amp; Zusammenfassen von Unternehmensdaten zur Vorbereitung von Vertriebsgesprächen.</p>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/dombeuryan-hash" class="project-link" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                  GitHub
-                </a>
+              <div class="pi-tags">
+                <span>Relevance AI</span><span>Python</span><span>API Integration</span>
               </div>
-            </article>
+              <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
 
-            <article class="project-card reveal">
-              <div class="project-num">03</div>
-              <h3 class="project-name">Interaktive Deutschlandkarten-GUI</h3>
-              <p class="project-desc">
-                Desktop-GUI zur Stadtauswahl, Distanzberechnung via Dijkstra-Algorithmus und Detailanzeige (Koordinaten, Stadtmerkmale). Implementiert in C++ mit Qt.
-              </p>
-              <div class="project-tech">
-                <span class="tag tag-sm">C++</span>
-                <span class="tag tag-sm">Qt Creator</span>
-                <span class="tag tag-sm">Dijkstra</span>
-                <span class="tag tag-sm">Algorithms</span>
+            <a class="proj-item" href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">
+              <span class="pi-num">03</span>
+              <div class="pi-body">
+                <h3 class="pi-name">Lead-Qualification Agent (n8n)</h3>
+                <p class="pi-desc">Automatisiertes System zur Bewertung eingehender Leads und Vorbereitung von Sales-Calls durch KI-basiertes Scoring.</p>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/dombeuryan-hash" class="project-link" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                  GitHub
-                </a>
+              <div class="pi-tags">
+                <span>n8n</span><span>AI Scoring</span><span>Automation</span>
               </div>
-            </article>
+              <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
 
-            <article class="project-card reveal">
-              <div class="project-num">04</div>
-              <h3 class="project-name">Pomodoro Productivity App</h3>
-              <p class="project-desc">
-                Web-App zur Steigerung der Produktivität: Pomodoro-Timer, integrierte Aufgabenverwaltung und Sitzungsstatistiken. Vollständig im Browser lauffähig.
-              </p>
-              <div class="project-tech">
-                <span class="tag tag-sm">HTML</span>
-                <span class="tag tag-sm">CSS</span>
-                <span class="tag tag-sm">JavaScript</span>
+            <a class="proj-item" href="https://github.com/dombeuryan-hash/Promodoro-App" target="_blank" rel="noreferrer">
+              <span class="pi-num">04</span>
+              <div class="pi-body">
+                <h3 class="pi-name">Pomodoro Productivity App</h3>
+                <p class="pi-desc">Web-App mit Pomodoro-Timer, Aufgabenverwaltung und Sitzungsstatistiken. Vollständig im Browser lauffähig.</p>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/dombeuryan-hash/Promodoro-App" class="project-link" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                  GitHub
-                </a>
+              <div class="pi-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
               </div>
-            </article>
+              <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
 
-            <article class="project-card reveal">
-              <div class="project-num">05</div>
-              <h3 class="project-name">MERN Online Shop</h3>
-              <p class="project-desc">
-                Small full-stack online shop built with the MERN stack (MongoDB, Express, React, Node.js). Covers product listing, cart management and a REST API backend.
-              </p>
-              <div class="project-tech">
-                <span class="tag tag-sm">MongoDB</span>
-                <span class="tag tag-sm">Express</span>
-                <span class="tag tag-sm">React</span>
-                <span class="tag tag-sm">Node.js</span>
+            <a class="proj-item" href="https://github.com/dombeuryan-hash/MERN" target="_blank" rel="noreferrer">
+              <span class="pi-num">05</span>
+              <div class="pi-body">
+                <h3 class="pi-name">MERN Online Shop</h3>
+                <p class="pi-desc">Full-stack online shop — MongoDB, Express, React, Node.js. Product listing, cart management and REST API backend.</p>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/dombeuryan-hash/MERN" class="project-link" target="_blank" rel="noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                  GitHub
-                </a>
+              <div class="pi-tags">
+                <span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span>
               </div>
-            </article>
+              <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
 
-            <!-- CTA card -->
-            <article class="project-card project-card--cta reveal">
-              <p class="cta-text">Want to see more?</p>
-              <a href="https://github.com/dombeuryan-hash" class="btn btn-ghost" target="_blank" rel="noreferrer">
-                Visit GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-              </a>
-            </article>
+            <a class="proj-item" href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">
+              <span class="pi-num">06</span>
+              <div class="pi-body">
+                <h3 class="pi-name">Interaktive Deutschlandkarten-GUI</h3>
+                <p class="pi-desc">Desktop-GUI zur Stadtauswahl und Distanzberechnung (Dijkstra). Implementiert in C++ mit Qt Creator.</p>
+              </div>
+              <div class="pi-tags">
+                <span>C++</span><span>Qt</span><span>Dijkstra</span><span>Algorithms</span>
+              </div>
+              <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
 
           </div>
+
+          <div class="proj-footer">
+            <a href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer" class="proj-gh-link">
+              View all on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+
         </div>
       </section>
 
       <!-- ── CONTACT ────────────────────────────────── -->
       <section class="section" id="contact">
-        <div class="container">
-          <div class="section-label reveal">05 — Contact</div>
-          <h2 class="section-title reveal">Get in Touch</h2>
-          <p class="section-sub reveal">
-            Ich freue mich über Nachrichten, Projektanfragen oder einfach einen kurzen Austausch.
-          </p>
-          <div class="contact-grid">
-            <a href="mailto:dombeuryan@gmail.com" class="contact-card reveal">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              </div>
-              <div>
-                <p class="contact-label">Email</p>
-                <p class="contact-value">dombeuryan@gmail.com</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/curtis-dombeu-350b47238/" class="contact-card reveal" target="_blank" rel="noreferrer">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </div>
-              <div>
-                <p class="contact-label">LinkedIn</p>
-                <p class="contact-value">curtis-dombeu-350b47238</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-            <a href="https://github.com/dombeuryan-hash" class="contact-card reveal" target="_blank" rel="noreferrer">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              </div>
-              <div>
-                <p class="contact-label">GitHub</p>
-                <p class="contact-value">dombeuryan-hash</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-            <a href="tel:+4917667862181" class="contact-card reveal">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6.29 6.29l1.87-1.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <p class="contact-label">Phone</p>
-                <p class="contact-value">+49 176 678 62181</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
+        <div class="s-container">
+          <div class="s-head">
+            <span class="s-num">05</span>
+            <h2 class="s-title">Contact</h2>
+          </div>
+          <div class="contact-body">
+            <p class="contact-line-big">
+              Ich freue mich über Nachrichten,<br>Projektanfragen oder einen kurzen Austausch.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:dombeuryan@gmail.com" class="cl">
+                <span class="cl-label">Email</span>
+                <span class="cl-val">dombeuryan@gmail.com</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/curtis-dombeu-350b47238/" class="cl" target="_blank" rel="noreferrer">
+                <span class="cl-label">LinkedIn</span>
+                <span class="cl-val">curtis-dombeu-350b47238</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://github.com/dombeuryan-hash" class="cl" target="_blank" rel="noreferrer">
+                <span class="cl-label">GitHub</span>
+                <span class="cl-val">dombeuryan-hash</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="tel:+4917667862181" class="cl">
+                <span class="cl-label">Phone</span>
+                <span class="cl-val">+49 176 678 62181</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
     </main>
 
     <!-- ── FOOTER ─────────────────────────────────── -->
     <footer class="footer">
-      <div class="container footer-inner">
-        <span class="footer-logo">RCD<span class="logo-dot">.</span></span>
-        <p class="footer-copy">© 2025 Ryan Curtis Dombeu — Crafted with care</p>
+      <div class="s-container footer-inner">
+        <span class="footer-logo">RCD<span>.</span></span>
+        <p>© 2025 Ryan Curtis Dombeu</p>
         <a href="#home" class="footer-top">
           Back to top
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 15l-6-6-6 6"/></svg>
         </a>
       </div>
     </footer>
