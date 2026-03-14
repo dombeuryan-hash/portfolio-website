@@ -8,13 +8,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
-    <!-- ── HEADER BAR ──────────────────────────────── -->
+    <!-- ── HEADER ──────────────────────────────── -->
     <header class="header" id="header">
       <div class="hdr-identity">
         <span class="hdr-greeting" id="greeting">Good evening!</span>
@@ -22,9 +22,17 @@
         <span class="hdr-name">Ryan C. Dombeu</span>
       </div>
 
-      <nav class="hdr-socials">
-        <span class="hdr-label">Socials</span>
+      <nav class="hdr-nav" id="hdrNav">
+        <a href="#home"     class="hn" data-i18n="nav-index">Index</a>
         <span class="hdr-div">/</span>
+        <a href="#about"    class="hn" data-i18n="nav-about">About</a>
+        <span class="hdr-div">/</span>
+        <a href="#projects" class="hn" data-i18n="nav-projects">Projects</a>
+        <span class="hdr-div">/</span>
+        <a href="#contact"  class="hn" data-i18n="nav-contact">Contact</a>
+      </nav>
+
+      <nav class="hdr-socials">
         <a href="https://www.linkedin.com/in/curtis-dombeu-350b47238/" target="_blank" rel="noreferrer">li</a>
         <span class="hdr-div">/</span>
         <a href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">gh</a>
@@ -32,17 +40,25 @@
         <a href="mailto:dombeuryan@gmail.com">em</a>
       </nav>
 
-      <nav class="hdr-nav" id="hdrNav">
-        <a href="#home"       class="hn">Index</a>
+      <!-- Language switch -->
+      <div class="lang-switch" id="langSwitch">
+        <button class="ls-btn active" data-lang="en">EN</button>
         <span class="hdr-div">/</span>
-        <a href="#about"      class="hn">About</a>
+        <button class="ls-btn" data-lang="fr">FR</button>
         <span class="hdr-div">/</span>
-        <a href="#projects"   class="hn">Projects</a>
-        <span class="hdr-div">/</span>
-        <a href="#contact"    class="hn">Contact</a>
-      </nav>
+        <button class="ls-btn" data-lang="de">DE</button>
+      </div>
 
-      <a href="#contact" class="hdr-cta">Let's talk!</a>
+      <a href="#contact" class="hdr-cta" data-i18n="hdr-cta">Let's talk!</a>
+
+      <button class="hdr-theme" id="themeBtn" aria-label="Toggle theme">
+        <svg class="theme-sun" viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
+          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707z"/>
+        </svg>
+        <svg class="theme-moon" viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
+          <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+      </button>
 
       <button class="hdr-menu" id="menuBtn" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
@@ -51,10 +67,10 @@
 
     <!-- Mobile overlay nav -->
     <div class="mobile-nav" id="mobileNav">
-      <a href="#home"     class="mn-link" data-close>Index</a>
-      <a href="#about"    class="mn-link" data-close>About</a>
-      <a href="#projects" class="mn-link" data-close>Projects</a>
-      <a href="#contact"  class="mn-link" data-close>Contact</a>
+      <a href="#home"     class="mn-link" data-close data-i18n="nav-index">Index</a>
+      <a href="#about"    class="mn-link" data-close data-i18n="nav-about">About</a>
+      <a href="#projects" class="mn-link" data-close data-i18n="nav-projects">Projects</a>
+      <a href="#contact"  class="mn-link" data-close data-i18n="nav-contact">Contact</a>
       <div class="mn-socials">
         <a href="https://www.linkedin.com/in/curtis-dombeu-350b47238/" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">GitHub</a>
@@ -66,63 +82,35 @@
 
       <!-- ── HERO ──────────────────────────────────── -->
       <section class="hero" id="home">
-
-        <!-- Left column -->
-        <div class="hero-left">
-          <div class="hero-name-block">
-            <p class="hero-pre">Hi there! This is</p>
-            <p class="hero-fullname">Ryan Curtis Dombeu</p>
-          </div>
-
+        <div class="s-container hero-inner">
           <div class="hero-display">
-            <!-- Main display text -->
             <div class="display-main">
               <span class="dl">CODE &amp;</span>
               <span class="dl">AUTOMATE</span>
             </div>
-            <!-- Mirror / reflection -->
             <div class="display-mirror" aria-hidden="true">
               <span class="dl">CODE &amp;</span>
               <span class="dl">AUTOMATE</span>
             </div>
-            <!-- Floating accent labels (like FINTECH / WEB3 in reference) -->
-            <div class="display-labels" aria-hidden="true">
-              <span>AI AGENTS</span>
-              <span>FULL-STACK</span>
+          </div>
+          <div class="hero-footer">
+            <div class="hero-info">
+              <p class="hero-byline">by Ryan Curtis Dombeu</p>
+              <p class="hero-sub" data-i18n="hero-bio">CS Student (7th Sem) at Frankfurt University of Applied Sciences. Building AI agents, automation systems &amp; full-stack web apps with Python, TypeScript and modern tools.</p>
+              <div class="hero-badge">
+                <span class="pulse"></span>
+                <span data-i18n="hero-available">Available for opportunities</span>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a href="#contact" class="hr-cta">
+                <span data-i18n="hdr-cta">Let's talk!</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <p class="hero-scroll" data-i18n="hero-scroll">(Scroll down)</p>
             </div>
           </div>
-
-          <p class="hero-scroll">(Scroll down)</p>
         </div>
-
-        <!-- Right info panel -->
-        <aside class="hero-right">
-          <div class="hr-services">
-            <ul>
-              <li>AI Agent Development</li>
-              <li>Workflow Automation</li>
-              <li>Full-Stack Development</li>
-              <li>API Integration</li>
-              <li>Prompt Engineering</li>
-            </ul>
-          </div>
-
-          <a href="#contact" class="hr-cta">
-            How can I help?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
-
-          <div class="hr-bio">
-            <p>CS Student (7th Sem) at Frankfurt University of Applied Sciences. Building AI agents, automation systems &amp; full-stack web apps with Python, TypeScript and modern tools.</p>
-            <div class="hr-badge">
-              <span class="pulse"></span>
-              Available for opportunities
-            </div>
-          </div>
-        </aside>
-
-        <!-- Bottom glow -->
-        <div class="hero-glow" aria-hidden="true"></div>
       </section>
 
       <!-- ── ABOUT ─────────────────────────────────── -->
@@ -130,37 +118,25 @@
         <div class="s-container">
           <div class="s-head">
             <span class="s-num">01</span>
-            <h2 class="s-title">About</h2>
+            <h2 class="s-title" data-i18n="about-title">About</h2>
           </div>
           <div class="about-body">
             <div class="about-text">
-              <p>
-                Ich bin Ryan Curtis Dombeu, Informatikstudent im 7. Semester an der Frankfurt University of Applied Sciences
-                mit besonderem Interesse an AI Agents, Automatisierung und Full-Stack-Development. Ich entwickle praxisnahe
-                digitale Lösungen mit Python, JavaScript/TypeScript, C/C++, SQL und REST APIs und verbinde dabei
-                Softwareentwicklung mit effizienten Automatisierungsansätzen.
-              </p>
-              <p>
-                Mein Ziel ist es, durch KI-gestützte Anwendungen, moderne Webtechnologien und intelligente Prozesse einen
-                konkreten Mehrwert in Projekten zu schaffen.
-              </p>
+              <p data-i18n="about-p1">I'm Ryan Curtis Dombeu, a Computer Science student in my 7th semester at Frankfurt University of Applied Sciences with a strong interest in AI agents, automation and full-stack development. I build practical digital solutions using Python, JavaScript/TypeScript, C/C++, SQL and REST APIs — bridging software engineering with efficient automation approaches.</p>
+              <p data-i18n="about-p2">My goal is to create real value in projects through AI-powered applications, modern web technologies and intelligent processes.</p>
             </div>
             <div class="about-stats">
               <div class="astat">
-                <span class="astat-n">7</span>
-                <span class="astat-l">Semesters</span>
+                <span class="astat-n" data-counter="7">0</span>
+                <span class="astat-l" data-i18n="stat-sem">Semesters</span>
               </div>
               <div class="astat">
-                <span class="astat-n">3</span>
-                <span class="astat-l">Spoken<br>Languages</span>
+                <span class="astat-n" data-counter="3">0</span>
+                <span class="astat-l" data-i18n-html="stat-lang">Spoken<br>Languages</span>
               </div>
               <div class="astat">
-                <span class="astat-n">7+</span>
-                <span class="astat-l">Projects<br>Built</span>
-              </div>
-              <div class="astat">
-                <span class="astat-n">20%</span>
-                <span class="astat-l">Time Saved<br>via Automation</span>
+                <span class="astat-n" data-counter="60" data-suffix="%">0%</span>
+                <span class="astat-l" data-i18n-html="stat-auto">Time Saved<br>via Automation</span>
               </div>
             </div>
           </div>
@@ -182,38 +158,27 @@
         <div class="s-container">
           <div class="s-head">
             <span class="s-num">02</span>
-            <h2 class="s-title">Skills</h2>
+            <h2 class="s-title" data-i18n="skills-title">Skills</h2>
           </div>
-          <div class="skills-rows">
-            <div class="skill-row">
-              <span class="sr-label">Languages</span>
-              <div class="sr-tags">
-                <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>C</span><span>C++</span><span>Java</span>
-              </div>
+        </div>
+
+        <div class="skills-marquee">
+          <div class="mq-badge"><span>&lt; code &gt;</span></div>
+          <div class="mq-row">
+            <div class="mq-inner">
+              <span class="sp">Python</span><span class="sp">TypeScript</span><span class="sp">JavaScript</span><span class="sp">Vue 3</span><span class="sp">React</span><span class="sp">C / C++</span><span class="sp">Java</span><span class="sp">SQL</span><span class="sp">HTML · CSS</span><span class="sp">Vite</span><span class="sp">Tailwind</span><span class="sp">REST APIs</span>
             </div>
-            <div class="skill-row">
-              <span class="sr-label">Web &amp; Frameworks</span>
-              <div class="sr-tags">
-                <span>Vue 3</span><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>REST APIs</span><span>HTML / CSS</span>
-              </div>
+            <div class="mq-inner" aria-hidden="true">
+              <span class="sp">Python</span><span class="sp">TypeScript</span><span class="sp">JavaScript</span><span class="sp">Vue 3</span><span class="sp">React</span><span class="sp">C / C++</span><span class="sp">Java</span><span class="sp">SQL</span><span class="sp">HTML · CSS</span><span class="sp">Vite</span><span class="sp">Tailwind</span><span class="sp">REST APIs</span>
             </div>
-            <div class="skill-row">
-              <span class="sr-label">AI &amp; Automation</span>
-              <div class="sr-tags">
-                <span>n8n</span><span>Relevance AI</span><span>AI Agents</span><span>Prompt Engineering</span><span>Workflow Automation</span><span>API Integration</span>
-              </div>
+          </div>
+          <div class="mq-badge"><span>&lt; automate /&gt;</span></div>
+          <div class="mq-row reverse">
+            <div class="mq-inner">
+              <span class="sp ac">n8n</span><span class="sp ac">Relevance AI</span><span class="sp ac">AI Agents</span><span class="sp ac">Prompt Engineering</span><span class="sp ac">Workflow Automation</span><span class="sp ac">API Integration</span><span class="sp">Git</span><span class="sp">Scrum / Agile</span><span class="sp">🇬🇧 English</span><span class="sp">🇫🇷 French</span><span class="sp">🇩🇪 German C1</span>
             </div>
-            <div class="skill-row">
-              <span class="sr-label">Tools &amp; DB</span>
-              <div class="sr-tags">
-                <span>MS SQL Server</span><span>Git</span><span>Scrum / Agile</span><span>Qt Creator</span><span>MS Office</span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="sr-label">Spoken Languages</span>
-              <div class="sr-tags">
-                <span>🇬🇧 English — Native</span><span>🇫🇷 French — Native</span><span>🇩🇪 German — C1</span>
-              </div>
+            <div class="mq-inner" aria-hidden="true">
+              <span class="sp ac">n8n</span><span class="sp ac">Relevance AI</span><span class="sp ac">AI Agents</span><span class="sp ac">Prompt Engineering</span><span class="sp ac">Workflow Automation</span><span class="sp ac">API Integration</span><span class="sp">Git</span><span class="sp">Scrum / Agile</span><span class="sp">🇬🇧 English</span><span class="sp">🇫🇷 French</span><span class="sp">🇩🇪 German C1</span>
             </div>
           </div>
         </div>
@@ -224,50 +189,42 @@
         <div class="s-container">
           <div class="s-head">
             <span class="s-num">03</span>
-            <h2 class="s-title">Experience</h2>
+            <h2 class="s-title" data-i18n="xp-title">Experience</h2>
           </div>
           <div class="xp-list">
-
             <div class="xp-item">
               <div class="xp-meta">
                 <span class="xp-date">11.2025 — present</span>
                 <span class="xp-loc">Stuttgart, DE</span>
               </div>
               <div class="xp-body">
-                <h3 class="xp-role">Automation &amp; AI Support</h3>
+                <h3 class="xp-role" data-i18n="xp1-role">Automation &amp; AI Support</h3>
                 <p class="xp-company">Level Up in Germany e. V.</p>
                 <ul class="xp-bullets">
-                  <li>Entwicklung automatisierter Prozesse für Content- und Serviceabläufe</li>
-                  <li>Zeitersparnis von 20 % durch Automatisierung manueller Schritte</li>
+                  <li data-i18n="xp1-b1">Developed automated processes for content and service workflows</li>
+                  <li data-i18n="xp1-b2">60% time saved through automation of manual steps</li>
                 </ul>
-                <div class="xp-tags">
-                  <span>n8n</span><span>Automation</span><span>Content Workflows</span>
-                </div>
+                <div class="xp-tags"><span>n8n</span><span>Automation</span><span>Content Workflows</span></div>
               </div>
             </div>
-
             <div class="xp-item">
               <div class="xp-meta">
                 <span class="xp-date">01.2025 — 02.2026</span>
                 <span class="xp-loc">Frankfurt, DE</span>
               </div>
               <div class="xp-body">
-                <h3 class="xp-role">Sales Research &amp; KI-gestützte Vertriebsunterstützung</h3>
+                <h3 class="xp-role" data-i18n="xp2-role">Sales Research &amp; AI-Powered Sales Support</h3>
                 <p class="xp-company">FAZIT Communication GmbH</p>
                 <ul class="xp-bullets">
-                  <li>Erstellung von Zusammenfassungen, Reports und Vorlagen für das Vertriebsteam</li>
-                  <li>Mitarbeit an KI-gestützten Abläufen zur effizienteren Informationsverarbeitung</li>
+                  <li data-i18n="xp2-b1">Created summaries, reports and templates for the sales team</li>
+                  <li data-i18n="xp2-b2">Contributed to AI-powered workflows for more efficient information processing</li>
                 </ul>
-                <div class="xp-tags">
-                  <span>KI-Tools</span><span>Research</span><span>Reporting</span>
-                </div>
+                <div class="xp-tags"><span>AI Tools</span><span>Research</span><span>Reporting</span></div>
               </div>
             </div>
-
           </div>
 
-          <!-- Education -->
-          <div class="s-sub-head">Education</div>
+          <div class="s-sub-head" data-i18n="xp-edu">Education</div>
           <div class="xp-list">
             <div class="xp-item">
               <div class="xp-meta">
@@ -275,9 +232,9 @@
                 <span class="xp-loc">Frankfurt, DE</span>
               </div>
               <div class="xp-body">
-                <h3 class="xp-role">B.Sc. Informatik</h3>
+                <h3 class="xp-role">B.Sc. Computer Science</h3>
                 <p class="xp-company">Frankfurt University of Applied Sciences</p>
-                <p class="xp-note">Fokus: Softwareentwicklung, KI-Agenten, Algorithmen und Automatisierung</p>
+                <p class="xp-note" data-i18n="edu1-note">Focus: Software Engineering, AI Agents, Algorithms &amp; Automation</p>
               </div>
             </div>
             <div class="xp-item">
@@ -286,13 +243,12 @@
                 <span class="xp-loc">Douala, CM</span>
               </div>
               <div class="xp-body">
-                <h3 class="xp-role">GCE A-Level (Abitur equivalent)</h3>
+                <h3 class="xp-role">GCE A-Level</h3>
                 <p class="xp-company">Laval Bilingual College</p>
-                <p class="xp-note">Durchschnittsnote: 1,6</p>
+                <p class="xp-note" data-i18n="edu2-note">Grade average: 1.6</p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -301,92 +257,70 @@
         <div class="s-container">
           <div class="s-head">
             <span class="s-num">04</span>
-            <h2 class="s-title">Projects</h2>
+            <h2 class="s-title" data-i18n="proj-title">Projects</h2>
           </div>
-
           <div class="proj-list">
-
             <a class="proj-item" href="https://github.com/dombeuryan-hash/Quiz-UI" target="_blank" rel="noreferrer">
               <span class="pi-num">01</span>
               <div class="pi-body">
                 <h3 class="pi-name">Quiz UI</h3>
-                <p class="pi-desc">Interactive multiple-choice quiz app — Vue 3, TypeScript, Tailwind CSS, Composition API. Fully type-safe (55 % TS, 41 % Vue).</p>
+                <p class="pi-desc" data-i18n="proj1-desc">Interactive multiple-choice quiz app — Vue 3, TypeScript, Tailwind CSS. Fully type-safe.</p>
               </div>
-              <div class="pi-tags">
-                <span>Vue 3</span><span>TypeScript</span><span>Tailwind</span><span>Vite</span>
-              </div>
+              <div class="pi-tags"><span>Vue 3</span><span>TypeScript</span><span>Tailwind</span></div>
               <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-
             <a class="proj-item" href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">
               <span class="pi-num">02</span>
               <div class="pi-body">
-                <h3 class="pi-name">KI-gestützter Sales Research Agent</h3>
-                <p class="pi-desc">Automatisierter Agent zum Sammeln &amp; Zusammenfassen von Unternehmensdaten zur Vorbereitung von Vertriebsgesprächen.</p>
+                <h3 class="pi-name" data-i18n="proj2-name">AI Sales Research Agent</h3>
+                <p class="pi-desc" data-i18n="proj2-desc">Automated agent for collecting & summarising company data to prepare sales conversations.</p>
               </div>
-              <div class="pi-tags">
-                <span>Relevance AI</span><span>Python</span><span>API Integration</span>
-              </div>
+              <div class="pi-tags"><span>Relevance AI</span><span>Python</span><span>API</span></div>
               <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-
             <a class="proj-item" href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">
               <span class="pi-num">03</span>
               <div class="pi-body">
-                <h3 class="pi-name">Lead-Qualification Agent (n8n)</h3>
-                <p class="pi-desc">Automatisiertes System zur Bewertung eingehender Leads und Vorbereitung von Sales-Calls durch KI-basiertes Scoring.</p>
+                <h3 class="pi-name" data-i18n="proj3-name">Lead Qualification Agent (n8n)</h3>
+                <p class="pi-desc" data-i18n="proj3-desc">Automated system for scoring incoming leads and preparing sales calls using AI-based scoring.</p>
               </div>
-              <div class="pi-tags">
-                <span>n8n</span><span>AI Scoring</span><span>Automation</span>
-              </div>
+              <div class="pi-tags"><span>n8n</span><span>AI Scoring</span><span>Automation</span></div>
               <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-
             <a class="proj-item" href="https://github.com/dombeuryan-hash/Promodoro-App" target="_blank" rel="noreferrer">
               <span class="pi-num">04</span>
               <div class="pi-body">
                 <h3 class="pi-name">Pomodoro Productivity App</h3>
-                <p class="pi-desc">Web-App mit Pomodoro-Timer, Aufgabenverwaltung und Sitzungsstatistiken. Vollständig im Browser lauffähig.</p>
+                <p class="pi-desc" data-i18n="proj4-desc">Web app with Pomodoro timer, task management and session statistics.</p>
               </div>
-              <div class="pi-tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
+              <div class="pi-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
               <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-
             <a class="proj-item" href="https://github.com/dombeuryan-hash/MERN" target="_blank" rel="noreferrer">
               <span class="pi-num">05</span>
               <div class="pi-body">
                 <h3 class="pi-name">MERN Online Shop</h3>
-                <p class="pi-desc">Full-stack online shop — MongoDB, Express, React, Node.js. Product listing, cart management and REST API backend.</p>
+                <p class="pi-desc" data-i18n="proj5-desc">Full-stack online shop — MongoDB, Express, React, Node.js.</p>
               </div>
-              <div class="pi-tags">
-                <span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span>
-              </div>
+              <div class="pi-tags"><span>MongoDB</span><span>React</span><span>Node.js</span></div>
               <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-
             <a class="proj-item" href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer">
               <span class="pi-num">06</span>
               <div class="pi-body">
-                <h3 class="pi-name">Interaktive Deutschlandkarten-GUI</h3>
-                <p class="pi-desc">Desktop-GUI zur Stadtauswahl und Distanzberechnung (Dijkstra). Implementiert in C++ mit Qt Creator.</p>
+                <h3 class="pi-name" data-i18n="proj6-name">Interactive Germany Map GUI</h3>
+                <p class="pi-desc" data-i18n="proj6-desc">Desktop GUI for city selection and distance calculation (Dijkstra). C++ with Qt Creator.</p>
               </div>
-              <div class="pi-tags">
-                <span>C++</span><span>Qt</span><span>Dijkstra</span><span>Algorithms</span>
-              </div>
+              <div class="pi-tags"><span>C++</span><span>Qt</span><span>Dijkstra</span></div>
               <svg class="pi-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-
           </div>
-
           <div class="proj-footer">
             <a href="https://github.com/dombeuryan-hash" target="_blank" rel="noreferrer" class="proj-gh-link">
-              View all on GitHub
+              <span data-i18n="proj-gh">View all on GitHub</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
           </div>
-
         </div>
       </section>
 
@@ -395,15 +329,13 @@
         <div class="s-container">
           <div class="s-head">
             <span class="s-num">05</span>
-            <h2 class="s-title">Contact</h2>
+            <h2 class="s-title" data-i18n="contact-title">Contact</h2>
           </div>
           <div class="contact-body">
-            <p class="contact-line-big">
-              Ich freue mich über Nachrichten,<br>Projektanfragen oder einen kurzen Austausch.
-            </p>
+            <p class="contact-line-big" data-i18n-html="contact-line">Feel free to reach out<br>for projects or just a chat.</p>
             <div class="contact-links">
               <a href="mailto:dombeuryan@gmail.com" class="cl">
-                <span class="cl-label">Email</span>
+                <span class="cl-label" data-i18n="contact-email">Email</span>
                 <span class="cl-val">dombeuryan@gmail.com</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
               </a>
@@ -428,9 +360,9 @@
     <footer class="footer">
       <div class="s-container footer-inner">
         <span class="footer-logo">RCD<span>.</span></span>
-        <p>© 2025 Ryan Curtis Dombeu</p>
+        <p data-i18n="footer-copy">© 2025 Ryan Curtis Dombeu</p>
         <a href="#home" class="footer-top">
-          Back to top
+          <span data-i18n="footer-back">Back to top</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 15l-6-6-6 6"/></svg>
         </a>
       </div>
